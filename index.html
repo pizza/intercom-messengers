@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intercom Messenger Demo</title>
+    <title>Intercom Messenger Testing</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -19,69 +19,55 @@
         p {
             color: #666;
         }
-        .note {
-            background: #f5f5f5;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 20px;
+        .messenger-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 24px;
         }
-        code {
+        .messenger-list li {
+            margin-bottom: 12px;
+        }
+        .messenger-list a {
+            display: block;
+            padding: 16px 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.2s;
+        }
+        .messenger-list a:hover {
             background: #e8e8e8;
-            padding: 2px 6px;
-            border-radius: 4px;
+        }
+        .messenger-list .title {
+            font-weight: 600;
+            color: #0066ff;
+        }
+        .messenger-list .app-id {
+            font-family: monospace;
             font-size: 14px;
+            color: #666;
+            margin-top: 4px;
         }
     </style>
 </head>
 <body>
-    <h1>Intercom Messenger Demo</h1>
-    <p>This page has the Intercom messenger widget installed. Look for the chat icon in the bottom-right corner.</p>
+    <h1>Intercom Messenger Testing</h1>
+    <p>Test different Intercom Messenger configurations and designs. Each page loads a different app ID.</p>
 
-    <div class="note">
-        <strong>Note:</strong> Replace <code>YOUR_APP_ID</code> in the script below with your actual Intercom app ID to see the messenger.
-    </div>
-
-    <!-- Intercom Messenger Script -->
-    <script>
-        window.intercomSettings = {
-            api_base: "https://api-iam.intercom.io",
-            app_id: "rpcrzsiu"
-        };
-    </script>
-    <script>
-        (function(){
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', w.intercomSettings);
-            } else {
-                var d = document;
-                var i = function() {
-                    i.c(arguments);
-                };
-                i.q = [];
-                i.c = function(args) {
-                    i.q.push(args);
-                };
-                w.Intercom = i;
-                var l = function() {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https://widget.intercom.io/widget/rpcrzsiu';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                };
-                if (document.readyState === 'complete') {
-                    l();
-                } else if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            }
-        })();
-    </script>
+    <ul class="messenger-list">
+        <li>
+            <a href="messenger1.html">
+                <div class="title">Messenger 1</div>
+                <div class="app-id">rpcrzsiu</div>
+            </a>
+        </li>
+        <li>
+            <a href="messenger2.html">
+                <div class="title">Messenger 2</div>
+                <div class="app-id">YOUR_APP_ID</div>
+            </a>
+        </li>
+    </ul>
 </body>
 </html>
