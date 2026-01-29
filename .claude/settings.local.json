@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Intercom messenger demo and contact form pages\n\n- index.html: Simple page with Intercom messenger widget\n- contact.html: Basic contact form with name, email, subject, and message fields\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo create:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate app ID in widget script URL\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nReorganize into multi-messenger testing hub\n\n- index.html: Hub page linking to all messenger test pages\n- messenger1.html: Existing messenger with app ID rpcrzsiu\n- messenger2.html: Template ready for new app ID\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)"
+    ]
+  }
+}
