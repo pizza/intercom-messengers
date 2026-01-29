@@ -81,6 +81,19 @@
         })();
     </script>
 
+    <!-- Freshchat Widget Script -->
+    <script>
+        function initFreshdesk() {
+            window.fdWidget.init({
+                token: "01KG5M25DEFM2EDPEGWPA5NDXM",
+                host: "https://capybara.freshdesk.com",
+                widgetId: "01KG5M27QSQ1SA1K6NTETK69PV"
+            });
+        }
+
+        function initialize(i,t){var e;i.getElementById(t)?initFreshdesk():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://capybara.freshdesk.com/webchat/js/widget.js",e.onload=initFreshdesk,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshdesk-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    </script>
+
     <!-- GoatCounter Analytics -->
     <script data-goatcounter="https://intercom-messengers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
