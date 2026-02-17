@@ -49,35 +49,46 @@
             color: #666;
             margin-top: 4px;
         }
+        .description {
+            background: #fff8e6;
+            border-left: 4px solid #f0c000;
+            padding: 12px 16px;
+            margin-top: 24px;
+            border-radius: 0 6px 6px 0;
+        }
     </style>
 </head>
 <body>
     <h1>Intercom Messenger Testing</h1>
     <p>Test different Intercom Messenger configurations and designs.</p>
 
+    <div class="description">
+        <strong>Testing context:</strong> The first 4 messengers are configured with content about <strong>Radisson Blu Hotels</strong>. To test the escalation flows, try asking Fin about how to cancel a hotel reservation — this should trigger a handover to a human agent, and each messenger handles that handover differently.
+    </div>
+
     <ul class="messenger-list">
         <li>
             <a href="messenger1.html">
                 <div class="title">Fin for Generic Platform with handover to URL</div>
-                <div class="app-id">rpcrzsiu — Radisson Blu Hotels. Ask about cancelling hotel reservations.</div>
+                <div class="app-id">rpcrzsiu</div>
             </a>
         </li>
         <li>
             <a href="messenger2.html">
                 <div class="title">Fin for Generic Platform with handover to JavaScript</div>
-                <div class="app-id">rpcrzsiu — Radisson Blu Hotels. Ask about cancelling hotel reservations.</div>
+                <div class="app-id">rpcrzsiu</div>
             </a>
         </li>
         <li>
             <a href="messenger3.html">
                 <div class="title">Fin for Generic Platform with do nothing handover</div>
-                <div class="app-id">ysc4iwqf — Radisson Blu Hotels. Ask about cancelling hotel reservations.</div>
+                <div class="app-id">ysc4iwqf</div>
             </a>
         </li>
         <li>
             <a href="messenger4.html">
                 <div class="title">Fin for Generic Platform with handover using Data Connectors</div>
-                <div class="app-id">j68qzg4l — Radisson Blu Hotels. Ask about cancelling hotel reservations.</div>
+                <div class="app-id">j68qzg4l</div>
             </a>
         </li>
         <li>
